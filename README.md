@@ -1,4 +1,6 @@
 # Angpractice
+![Screenshot (198)](https://user-images.githubusercontent.com/87297598/141645285-71614a9c-663e-4189-bd1a-3ee4a5cbc2fb.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
