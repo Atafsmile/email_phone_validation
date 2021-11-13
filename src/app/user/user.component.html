@@ -1,0 +1,38 @@
+<h1 class="fw-bold">hi</h1>
+<div class="my-2">
+<label >user Name</label>
+<input type="text" class="form-control" (input)="userName($event)"/></div>
+<input type="text"class='form-control' [(ngModel)]='username'/>
+
+<div>{{username}}</div>
+<button class="btn btn-primary w-50" [disabled]='!allowEnable' (click)="changeUser()">Add User</button>
+<div >{{allowEnable}}</div>
+<div>{{users}}</div>
+
+<div [innerText]="allowEnable "></div>
+<div *ngIf='isuserCreated else noUser'>
+    User is created and the username is{{username}}
+</div>
+<ng-template #noUser>
+    <div>no user created</div>
+</ng-template>
+<!--input type="text"class='form-control' [(ngModel)]='userNAme'/>
+  <div>{{userNAme}}</div-->
+
+    <!--div>{{"user" }} with id{{userID}} is {{getUserById()}}</div>
+    <div>{{"user" }} with id{{userID}} is {{getUserById()}}</div-->
+    <div [ngStyle]="{'background-color':getColor()}" 
+    [ngClass]="{offline:userStatus ==='offline'}"
+    >{{"user"}} with id{{userID}} is {{getUserById()}}</div>
+    <div>{{"user" }} with id{{userid}} is {{getUserById()}}</div>
+    <div>{{"user" }} with id{{userids}} is {{getUserById()}}</div>
+
+    <style>
+        .offline{
+            color:#fff;
+        }
+    </style>
+    <div *ngFor='let user of users'>
+        {{user}}
+
+    </div>
